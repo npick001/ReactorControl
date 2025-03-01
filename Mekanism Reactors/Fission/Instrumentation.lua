@@ -5,38 +5,49 @@
 --- For Bigger Reactors on the ATM9TTS 1.1.3 Server
 --- Created by NP
 ---------------------------------------------------------------------------
+local RI = {}
 
-function CreateReactorStatus(reactor)
+function GetReactorStatus(reactor)
     return {
-        activity = CheckActivity(reactor),
-        fuel = CheckFuel(reactor),
-        heat = CheckFuelHeat(reactor),
-        waste = CheckWaste(reactor),
-        burn_rate = GetCurrentBurnRate(reactor),
-        dmg_percent = GetDmgPercent(reactor),
+        activity = RI.CheckActivity(reactor),
+        fuel = RI.CheckFuel(reactor),
+        heat = RI.CheckFuelHeat(reactor),
+        waste = RI.CheckWaste(reactor),
+        coolant = RI.CheckCoolantLevels(reactor),
+        heated_coolant = RI.CheckHeatedCoolantLevels(reactor),
+        burn_rate = RI.GetCurrentBurnRate(reactor),
+        dmg_percent = RI.GetDmgPercent(reactor),
     }
 end
 
-function CheckActivity(r)
+function RI.CheckActivity(r)
     return r.getStatus()
 end
 
-function CheckFuel(r)
-    return r.getFuelFilledPercentage()
+function RI.CheckFuel(r)
+    return r.getFuelFilledPercentage() * 100
 end
 
-function CheckWaste(r)
-    return r.getWasteFilledPercentage()
+function RI.CheckWaste(r)
+    return r.getWasteFilledPercentage() * 100
 end
 
-function CheckFuelHeat(r)
+function RI.CheckFuelHeat(r)
     return r.getTemperature()
 end
 
-function GetCurrentBurnRate(r)
+function RI.GetCurrentBurnRate(r)
     return r.getActualBurnRate()    
 end
 
-function GetDmgPercent(r)
+function RI.GetDmgPercent(r)
     return r.getDamagePercent()
+end
+
+function RI.CheckCoolantLevels(r)
+    return r.getCoolantFilledPercentage() * 100
+end
+
+function RI.CheckHeatedCoolantLevels(r)
+    return r.getHeatedCoolantFilledPercentage() * 100
 end
