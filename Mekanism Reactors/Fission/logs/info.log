@@ -1,0 +1,235 @@
+[20:44] 0.09 < 0.1
+[20:44] Stability tick count: 0
+[20:45] Burn rate changed to 9.63 mb/t
+[20:45] Updated rolling average burn rate: 9.63 mb/t
+[20:45] Coolant level changed to 97.27932 %
+[20:45] Coolant level is decreasing, reduce burn rate
+[20:45] 0.09 < 0.1
+[20:45] Stability tick count: 1
+[20:47] Burn rate changed to 9.62 mb/t
+[20:47] Updated rolling average burn rate: 9.62 mb/t
+[20:47] Coolant level changed to 97.23186 %
+[20:47] Coolant level is decreasing, reduce burn rate
+[20:47] 0.09 < 0.1
+[20:47] Stability tick count: 2
+[20:49] Burn rate changed to 9.61 mb/t
+[20:49] Updated rolling average burn rate: 9.61 mb/t
+[20:49] Coolant level changed to 97.2076 %
+[20:49] Coolant level is decreasing, reduce burn rate
+[20:49] 0.09 < 0.1
+[20:49] Stability tick count: 3
+[20:51] Burn rate changed to 9.6 mb/t
+[20:51] Updated rolling average burn rate: 9.60 mb/t
+[20:51] Coolant level changed to 97.206536 %
+[20:51] Coolant level is decreasing, reduce burn rate
+[20:51] 0.09 < 0.1
+[20:51] Stability tick count: 4
+[20:52] Burn rate changed to 9.59 mb/t
+[20:52] Updated rolling average burn rate: 9.59 mb/t
+[20:52] Coolant level changed to 97.228668 %
+[20:52] Coolant level is increasing, increase burn rate
+[20:52] 0.089999999999998 < 0.1
+[20:52] Stability tick count: 5
+[20:54] Burn rate changed to 9.6 mb/t
+[20:54] Updated rolling average burn rate: 9.60 mb/t
+[20:54] Coolant level changed to 97.237204 %
+[20:54] Coolant level is increasing, increase burn rate
+[20:54] 0.09 < 0.1
+[20:54] Stability tick count: 6
+[20:56] Burn rate changed to 9.61 mb/t
+[20:56] Updated rolling average burn rate: 9.61 mb/t
+[20:56] Coolant level changed to 97.22254 %
+[20:56] Coolant level is decreasing, reduce burn rate
+[20:56] 0.09 < 0.1
+[20:56] Stability tick count: 7
+[20:57] Burn rate changed to 9.6 mb/t
+[20:57] Updated rolling average burn rate: 9.60 mb/t
+[20:57] Coolant level changed to 97.221476 %
+[20:57] Coolant level is decreasing, reduce burn rate
+[20:58] 0.09 < 0.1
+[20:58] Stability tick count: 8
+[20:59] Burn rate changed to 9.59 mb/t
+[20:59] Updated rolling average burn rate: 9.59 mb/t
+[20:59] Coolant level changed to 97.243612 %
+[20:59] Coolant level is increasing, increase burn rate
+[20:59] 0.09 < 0.1
+[20:59] Stability tick count: 9
+[21:01] Burn rate changed to 9.6 mb/t
+[21:01] Updated rolling average burn rate: 9.60 mb/t
+[21:01] Coolant level changed to 97.252144 %
+[21:01] Coolant level is increasing, increase burn rate
+[21:01] 0.089999999999998 < 0.1
+[21:01] Stability tick count: 10
+[21:03] Burn rate changed to 9.61 mb/t
+[21:03] Updated rolling average burn rate: 9.61 mb/t
+[21:03] Coolant level changed to 97.237484 %
+[21:03] Coolant level is decreasing, reduce burn rate
+[21:03] 0.09 < 0.1
+[21:03] Stability tick count: 11
+[21:04] Burn rate changed to 9.6 mb/t
+[21:04] Updated rolling average burn rate: 9.60 mb/t
+[21:04] Coolant level changed to 97.23642 %
+[21:04] Coolant level is decreasing, reduce burn rate
+[21:04] 0.09 < 0.1
+[21:04] Stability tick count: 12
+[21:06] Burn rate changed to 9.59 mb/t
+[21:06] Updated rolling average burn rate: 9.59 mb/t
+[21:06] Coolant level changed to 97.258552 %
+[21:06] Coolant level is increasing, increase burn rate
+[21:06] 0.089999999999998 < 0.1
+[21:06] Stability tick count: 13
+[21:08] Burn rate changed to 9.6 mb/t
+[21:08] Updated rolling average burn rate: 9.60 mb/t
+[21:08] Coolant level changed to 97.267088 %
+[21:08] Coolant level is increasing, increase burn rate
+[21:08] 0.09 < 0.1
+[21:08] Stability tick count: 14
+[21:10] Burn rate changed to 9.61 mb/t
+[21:10] Updated rolling average burn rate: 9.61 mb/t
+[21:10] Coolant level changed to 97.252424 %
+[21:10] Coolant level is decreasing, reduce burn rate
+[21:10] 0.09 < 0.1
+[21:10] Stability tick count: 15
+[21:11] Burn rate changed to 9.6 mb/t
+[21:11] Updated rolling average burn rate: 9.60 mb/t
+[21:11] Coolant level changed to 97.25136 %
+[21:11] Coolant level is decreasing, reduce burn rate
+[21:11] 0.09 < 0.1
+[21:11] Stability tick count: 16
+[21:13] Burn rate changed to 9.59 mb/t
+[21:13] Updated rolling average burn rate: 9.59 mb/t
+[21:13] Coolant level changed to 97.273492 %
+[21:13] Coolant level is increasing, increase burn rate
+[21:13] 0.09 < 0.1
+[21:13] Stability tick count: 17
+[21:15] Burn rate changed to 9.6 mb/t
+[21:15] Updated rolling average burn rate: 9.60 mb/t
+[21:15] Coolant level changed to 97.282028 %
+[21:15] Coolant level is increasing, increase burn rate
+[21:15] 0.09 < 0.1
+[21:15] Stability tick count: 18
+[21:17] Burn rate changed to 9.61 mb/t
+[21:17] Updated rolling average burn rate: 9.61 mb/t
+[21:17] Coolant level changed to 97.267364 %
+[21:17] Coolant level is decreasing, reduce burn rate
+[21:17] 0.09 < 0.1
+[21:17] Stability tick count: 19
+[21:17] Burn rate stabilized at 9.6000273190465, saving to file.
+[21:18] Burn rate changed to 9.6 mb/t
+[21:18] Updated rolling average burn rate: 9.60 mb/t
+[21:18] Coolant level changed to 97.2663 %
+[21:18] Coolant level is decreasing, reduce burn rate
+[21:18] 0.09 < 0.1
+[21:18] Stability tick count: 0
+[21:20] Burn rate changed to 9.59 mb/t
+[21:20] Updated rolling average burn rate: 9.59 mb/t
+[21:20] Coolant level changed to 97.288436 %
+[21:20] Coolant level is increasing, increase burn rate
+[21:20] 0.09 < 0.1
+[21:20] Stability tick count: 1
+[21:22] Burn rate changed to 9.6 mb/t
+[21:22] Updated rolling average burn rate: 9.60 mb/t
+[21:22] Coolant level changed to 97.296968 %
+[21:22] Coolant level is increasing, increase burn rate
+[21:22] 0.089999999999998 < 0.1
+[21:22] Stability tick count: 2
+[21:24] Burn rate changed to 9.61 mb/t
+[21:24] Updated rolling average burn rate: 9.61 mb/t
+[21:24] Coolant level changed to 97.282308 %
+[21:24] Coolant level is decreasing, reduce burn rate
+[21:24] 0.09 < 0.1
+[21:24] Stability tick count: 3
+[21:25] Burn rate changed to 9.6 mb/t
+[21:25] Updated rolling average burn rate: 9.60 mb/t
+[21:25] Coolant level changed to 97.281244 %
+[21:25] Coolant level is decreasing, reduce burn rate
+[21:25] 0.09 < 0.1
+[21:25] Stability tick count: 4
+[21:27] Burn rate changed to 9.59 mb/t
+[21:27] Updated rolling average burn rate: 9.59 mb/t
+[21:27] Coolant level changed to 97.303376 %
+[21:27] Coolant level is increasing, increase burn rate
+[21:27] 0.089999999999998 < 0.1
+[21:27] Stability tick count: 5
+[21:29] Burn rate changed to 9.6 mb/t
+[21:29] Updated rolling average burn rate: 9.60 mb/t
+[21:29] Coolant level changed to 97.311912 %
+[21:29] Coolant level is increasing, increase burn rate
+[21:29] 0.089999999999998 < 0.1
+[21:29] Stability tick count: 6
+[21:31] Burn rate changed to 9.61 mb/t
+[21:31] Updated rolling average burn rate: 9.61 mb/t
+[21:31] Coolant level changed to 97.297248 %
+[21:31] Coolant level is decreasing, reduce burn rate
+[21:31] 0.09 < 0.1
+[21:31] Stability tick count: 7
+[21:32] Burn rate changed to 9.6 mb/t
+[21:32] Updated rolling average burn rate: 9.60 mb/t
+[21:32] Coolant level changed to 97.296184 %
+[21:32] Coolant level is decreasing, reduce burn rate
+[21:32] 0.09 < 0.1
+[21:32] Stability tick count: 8
+[21:34] Burn rate changed to 9.59 mb/t
+[21:34] Updated rolling average burn rate: 9.59 mb/t
+[21:34] Coolant level changed to 97.318316 %
+[21:34] Coolant level is increasing, increase burn rate
+[21:34] 0.09 < 0.1
+[21:34] Stability tick count: 9
+[21:36] Burn rate changed to 9.6 mb/t
+[21:36] Updated rolling average burn rate: 9.60 mb/t
+[21:36] Coolant level changed to 97.326852 %
+[21:36] Coolant level is increasing, increase burn rate
+[21:36] 0.089999999999998 < 0.1
+[21:36] Stability tick count: 10
+[21:37] Burn rate changed to 9.61 mb/t
+[21:37] Updated rolling average burn rate: 9.61 mb/t
+[21:37] Coolant level changed to 97.312188 %
+[21:37] Coolant level is decreasing, reduce burn rate
+[21:38] 0.09 < 0.1
+[21:38] Stability tick count: 11
+[21:39] Burn rate changed to 9.6 mb/t
+[21:39] Updated rolling average burn rate: 9.60 mb/t
+[21:39] Coolant level changed to 97.311124 %
+[21:39] Coolant level is decreasing, reduce burn rate
+[21:39] 0.090000000000002 < 0.1
+[21:39] Stability tick count: 12
+[21:41] Reactor is now inactive
+[21:41] Burn rate changed to 0 mb/t
+[21:41] Updated rolling average burn rate: 8.63 mb/t
+[21:41] Coolant level changed to 100 %
+[21:41] Coolant level is increasing, increase burn rate
+[21:41] 0.09 < 0.1
+[21:41] Stability tick count: 13
+[21:43] 0.09 < 0.1
+[21:43] Stability tick count: 14
+[21:45] 0.09 < 0.1
+[21:45] Stability tick count: 15
+[21:46] 0.09 < 0.1
+[21:46] Stability tick count: 16
+[21:48] 0.09 < 0.1
+[21:48] Stability tick count: 17
+[21:50] 0.09 < 0.1
+[21:50] Stability tick count: 18
+[21:51] 0.09 < 0.1
+[21:51] Stability tick count: 19
+[21:51] Burn rate stabilized at 8.7010062497216, saving to file.
+[21:53] 0.09 < 0.1
+[21:53] Stability tick count: 0
+[21:55] 0.09 < 0.1
+[21:55] Stability tick count: 1
+[21:57] 0.09 < 0.1
+[21:57] Stability tick count: 2
+[21:58] 0.09 < 0.1
+[21:58] Stability tick count: 3
+[22:00] 0.09 < 0.1
+[22:00] Stability tick count: 4
+[22:02] 0.09 < 0.1
+[22:02] Stability tick count: 5
+[22:04] 0.09 < 0.1
+[22:04] Stability tick count: 6
+[22:05] 0.09 < 0.1
+[22:05] Stability tick count: 7
+[22:07] 0.09 < 0.1
+[22:07] Stability tick count: 8
+[22:09] 0.09 < 0.1
+[22:09] Stability tick count: 9

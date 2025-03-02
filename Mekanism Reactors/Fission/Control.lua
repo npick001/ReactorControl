@@ -17,13 +17,13 @@ local fuel_derivative = 0 -- will be used to determine if fuel is increasing or 
 local force_scrammed = false
 
 -- Rolling average for burn rate calculations
---local burn_rate_rolling_avg = logs.LoadBurnRate() -- rolling average of the burn rate
-local burn_rate_rolling_avg = 9.2 -- default burn rate for initial transient period
+local burn_rate_rolling_avg = logs.LoadBurnRate() -- rolling average of the burn rate
+--local burn_rate_rolling_avg = 9.6 -- default burn rate for initial transient period
 local alpha = 0.1 -- smoothing factor for the rolling average for exponential smoothing
 
 -- Burn rate stability control, when burn rate stablizes, write to file for 
 -- reading in on startup. This removes burn rate transient periods on startup
-local burn_rate_stable_threshold = 0.05  -- Max allowed change for stability
+local burn_rate_stable_threshold = 0.1  -- Max allowed change for stability
 local stability_ticks_required = 20      -- Number of ticks to consider stable
 local stability_tick_count = 0
 
@@ -249,6 +249,8 @@ end
 
 function RC.OptimizeBurnRate(r, status)
     local new_burn_rate = burn_rate_rolling_avg  -- Use the smoothed burn rate
+    local rate_increase = 0.1
+    local rate_decrease = 0.1
 
     local coolant_above_threshold = status.coolant >= 50
     local fuel_above_threshold = status.fuel >= 50
@@ -258,13 +260,13 @@ function RC.OptimizeBurnRate(r, status)
 
     -- Adjust burn rate based on coolant and fuel trends
     if coolant_increasing and fuel_increasing then
-        new_burn_rate = new_burn_rate + 0.1
+        new_burn_rate = new_burn_rate + rate_increase
     elseif coolant_derivative < 0 and fuel_derivative < 0 then
-        new_burn_rate = new_burn_rate - 0.1
+        new_burn_rate = new_burn_rate - rate_decrease
     elseif coolant_increasing and fuel_derivative == 0 then
-        new_burn_rate = new_burn_rate + 0.1
+        new_burn_rate = new_burn_rate + rate_increase
     elseif coolant_derivative < 0 and fuel_derivative == 0 then
-        new_burn_rate = new_burn_rate - 0.1
+        new_burn_rate = new_burn_rate - rate_decrease
     end
 
     -- Smooth out the burn rate using a rolling average
@@ -272,6 +274,8 @@ function RC.OptimizeBurnRate(r, status)
     reactor.setBurnRate(burn_rate_rolling_avg)
 
     -- Check if fluctuations have subsided
+    logs.LogInfo(math.abs(burn_rate_rolling_avg - new_burn_rate) .. " < " .. burn_rate_stable_threshold)
+    logs.LogInfo("Stability tick count: " .. stability_tick_count)
     if math.abs(burn_rate_rolling_avg - new_burn_rate) < burn_rate_stable_threshold then
         stability_tick_count = stability_tick_count + 1
     else
