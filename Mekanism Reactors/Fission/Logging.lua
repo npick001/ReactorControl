@@ -4,6 +4,7 @@ local Logging = {}
 local err_log = "ReactorControl/logs/error.log"
 local debug_log = "ReactorControl/logs/debug.log"
 local info_log = "ReactorControl/logs/info.log"
+local burn_rate_log = "ReactorControl/logs/burn_rate.log"
 
 local tick_count = 0 -- Track tick count for flushing
 
@@ -57,5 +58,31 @@ function Logging.CloseLogs()
     if Logging.DEBUG then Logging.DEBUG.close(); Logging.DEBUG = nil end
     if Logging.INFO then Logging.INFO.close(); Logging.INFO = nil end
 end
+
+function Logging.SaveBurnRate(rate)
+    local file = fs.open(burn_rate_log, "w")
+    if file then
+        file.writeLine(tostring(rate))
+        file.close()
+    else
+        Logging.LogError("Failed to save burn rate to file")
+    end
+end
+
+function Logging.LoadBurnRate()
+    if fs.exists(burn_rate_log) then
+        local file = fs.open(burn_rate_log, "r")
+        if file then
+            local rate = tonumber(file.readLine())
+            file.close()
+            if rate then
+                Logging.LogInfo("Loaded burn rate from file: " .. rate)
+                return rate
+            end
+        end
+    end
+    return 0.1  -- Default if no saved value exists
+end
+
 
 return Logging
