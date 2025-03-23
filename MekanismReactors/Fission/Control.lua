@@ -232,7 +232,9 @@ function RC.MaintainFuelLevel(r, status)
         return
     end
 
-    RC.OptimizeBurnRate(r, status)    
+    if status.activity then
+        RC.OptimizeBurnRate(r, status)    
+    end
 end
 
 function RC.ManageWasteLevels(r, status)
