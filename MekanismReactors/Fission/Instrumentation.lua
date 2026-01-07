@@ -2,7 +2,7 @@
 ---------------------------------------------------------------------------
 --- Written 2025
 --- This file is part of the Nuclear Reactor Control System Instrumentation
---- For Bigger Reactors on the ATM9TTS 1.1.3 Server
+--- For Mekanism on the ATM9TTS 1.1.3 Server
 --- Created by NP
 ---------------------------------------------------------------------------
 local RI = {}
