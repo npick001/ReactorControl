@@ -1,9 +1,10 @@
 local Logging = {}
 
 -- Log file paths
-local err_log = "logs/Turbine/error.log"
-local debug_log = "logs/Turbine/debug.log"
-local info_log = "logs/Turbine/info.log"
+local err_log = "logs/FissionReactor/error.log"
+local debug_log = "logs/FissionReactor/debug.log"
+local info_log = "logs/FissionReactor/info.log"
+local burn_rate_log = "logs/FissionReactor/burn_rate.log"
 
 local tick_count = 0 -- Track tick count for flushing
 
@@ -11,6 +12,12 @@ local tick_count = 0 -- Track tick count for flushing
 local function GetTimestamp()
     local time = textutils.formatTime(os.time(), true) -- 24-hour format
     return "[" .. time .. "] "
+end
+
+function Logging.SetLogPaths(errPath, debugPath, infoPath)
+    err_log = errPath
+    debug_log = debugPath
+    info_log = infoPath
 end
 
 function Logging.OpenLogs()
@@ -57,5 +64,31 @@ function Logging.CloseLogs()
     if Logging.DEBUG then Logging.DEBUG.close(); Logging.DEBUG = nil end
     if Logging.INFO then Logging.INFO.close(); Logging.INFO = nil end
 end
+
+function Logging.SaveBurnRate(rate)
+    local file = fs.open(burn_rate_log, "w")
+    if file then
+        file.writeLine(tostring(rate))
+        file.close()
+    else
+        Logging.LogError("Failed to save burn rate to file")
+    end
+end
+
+function Logging.LoadBurnRate()
+    if fs.exists(burn_rate_log) then
+        local file = fs.open(burn_rate_log, "r")
+        if file then
+            local rate = tonumber(file.readLine())
+            file.close()
+            if rate then
+                Logging.LogInfo("Loaded burn rate from file: " .. rate)
+                return rate
+            end
+        end
+    end
+    return 0.1  -- Default if no saved value exists
+end
+
 
 return Logging

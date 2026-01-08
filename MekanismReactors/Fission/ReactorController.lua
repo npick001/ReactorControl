@@ -4,6 +4,7 @@ local logs = require("Logging")
 
 function main()
     -- Initalize Logs
+    logs.SetLogPaths("logs/FissionReactor/errors.log", "logs/FissionReactor/debug.log", "logs/FissionReactor/info.log")
     logs.OpenLogs()
     logs.RefreshLogs()
 
@@ -11,7 +12,13 @@ function main()
     logs.LogDebug("Activity, Fuel (%), Heat (K), Waste (%), Coolant (%), Heated Coolant (%), Burn Rate (mb/t), Damage (%)")
 
     -- Check reactor status
-    reactor = peripheral.wrap("back")
+    for _, perph_name in pairs(peripheral.getNames()) do
+        if peripheral.getType(perph_name) == "fissionReactorLogicAdaptor" then
+            logs.LogInfo("Fission Reactor Logic Adaptor found: " .. perph_name)
+            reactor = peripheral.wrap(perph_name)
+            break
+        end
+    end
     while true do
         ControlReactor(reactor, GetReactorStatus(reactor))
         sleep(1) -- Run once per second
