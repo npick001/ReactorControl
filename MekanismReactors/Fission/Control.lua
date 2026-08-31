@@ -165,8 +165,6 @@ function RC.Scram(r, status, msg, err_msg)
 		r.scram()
 		logs.LogError(err_msg)
 		logs.LogDebug(msg)
-	else
-		logs.LogDebug("Scram attempted on an inactive reactor.")
 	end
 end
 
