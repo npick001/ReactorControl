@@ -2,7 +2,6 @@ require("Instrumentation")
 local logs = require("Logging")
 
 function main()
-
     -- Initalize Logs
     logs.SetLogPaths("logs/Turbine/errors.log", "logs/Turbine/debug.log", "logs/Turbine/info.log")
     logs.OpenLogs()

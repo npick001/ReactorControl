@@ -18,16 +18,16 @@ function GetTurbineStatus(turbine)
     }
 end
 
-function CheckSteamLevel(t)
+function TI.CheckSteamLevel(t)
     return t.getSteamFilledPercentage() * 100
 end
 
 function TI.GetSteamValue(t)
-    return t.getSteam()
+    return t.getSteam().amount
 end
 
 function TI.GetSteamInputRate(t)
-    return t.getLastSteamSteamInputRate()
+    return t.getLastSteamInputRate()
 end
 
 function TI.GetEnergyStored(t)
@@ -35,7 +35,7 @@ function TI.GetEnergyStored(t)
 end
 
 function TI.GetEnergyCapacity(t)
-    return t.getEnergyCapacity()
+    return t.getMaxEnergy()
 end
 
 function TI.GetEnergyProduction(t)

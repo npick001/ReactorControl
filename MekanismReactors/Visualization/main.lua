@@ -1,6 +1,5 @@
 local gui = require("/apis/gui")
 require("/ReactorControl/MekanismReactors/Fission/Control")
-require("determine_layout")
 -- require("/ReactorControl/MekanismReactors/Fission/Logging")
 -- local Reactor = require("/apis/reactor")
 -- local Controller = require("Control")
@@ -17,8 +16,7 @@ function main()
         end
     end
     
-    local monitors = gimme_mons("layout.config")
-    local monitor_0, monitor_1 = monitors["primary_monitor"], monitors["secondary_monitor"]
+    local monitor_0, monitor_1 = initMonitors()
 
     local main_display = gui.initializeDisplay(monitor_0)
     local debug_display = gui.initializeDisplay(monitor_1)
