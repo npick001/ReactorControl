@@ -14,6 +14,12 @@ local function GetTimestamp()
     return "[" .. time .. "] "
 end
 
+function Logging.SetLogPaths(errPath, debugPath, infoPath)
+    err_log = errPath
+    debug_log = debugPath
+    info_log = infoPath
+end
+
 function Logging.OpenLogs()
     if not Logging.ERRORS then Logging.ERRORS = fs.open(err_log, "a") end
     if not Logging.DEBUG then Logging.DEBUG = fs.open(debug_log, "a") end
