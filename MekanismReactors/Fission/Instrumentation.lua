@@ -8,10 +8,6 @@
 local RI = {}
 
 function GetReactorStatus(reactor)
-	if reactor == nil then
-		return
-	end
-
 	return {
 		activity = RI.CheckActivity(reactor),
 		fuel = RI.CheckFuel(reactor),
