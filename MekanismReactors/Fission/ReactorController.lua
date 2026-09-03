@@ -25,9 +25,11 @@ function main()
 		end
 	end
 
-	while true do
-		ControlReactor(reactor, GetReactorStatus(reactor))
-		sleep(1) -- Run once per second
+	if reactor ~= nil then
+		while true do
+			ControlReactor(reactor, GetReactorStatus(reactor))
+			sleep(1) -- Run once per second
+		end
 	end
 
 	-- Ensure logs are closed on exit
