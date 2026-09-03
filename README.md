@@ -71,10 +71,32 @@ ReactorControl/
 
 ## Installation
 
+### Mekanism Fission Reactor Setup
+
+1. First, pull the required base files from pastebin:
+   ```
+   pastebin get AU7wEJqv pull
+   pastebin get 7viAYyqi startup.lua
+   ```
+
+2. Then pull the control code from the ReactorControl repository:
+   ```
+   pull https://github.com/npick001/ReactorControl Controller
+   ```
+
+3. Ensure the `fissionReactorLogicAdapter` peripheral is connected to your computer
+
+4. Run the controller to start:
+   ```
+   startup
+   ```
+
+### Other Reactor Types
+
 1. Clone or download this repository to your ComputerCraft computer
 2. Ensure peripheral connections:
    - **Bigger Reactors**: Connect reactor to computer (default: "right")
-   - **Mekanism Fission**: Uses `fissionReactorLogicAdaptor` peripheral
+   - **Mekanism Fission**: Uses `fissionReactorLogicAdapter` peripheral
    - **Mekanism Turbine**: Uses `turbineValve` peripheral
 3. Run the appropriate controller script for your reactor type
 
