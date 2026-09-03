@@ -15,7 +15,7 @@ function main()
 
 	-- Check reactor status
 	local reactor
-	while reactor == nil do
+	while not reactor do
 		for _, perph_name in pairs(peripheral.getNames()) do
 			if peripheral.getType(perph_name) == "fissionReactorLogicAdapter" then
 				logs.LogInfo("Fission Reactor Logic Adapter found: " .. perph_name)

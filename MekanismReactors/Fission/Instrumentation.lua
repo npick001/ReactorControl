@@ -8,7 +8,7 @@
 local RI = {}
 
 function GetReactorStatus(reactor)
-	if reactor == nil then
+	if not reactor then
 		return
 	end
 
