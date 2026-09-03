@@ -14,13 +14,17 @@ function main()
 	)
 
 	-- Check reactor status
-	for _, perph_name in pairs(peripheral.getNames()) do
-		if peripheral.getType(perph_name) == "fissionReactorLogicAdapter" then
-			logs.LogInfo("Fission Reactor Logic Adapter found: " .. perph_name)
-			reactor = peripheral.wrap(perph_name)
-			break
+	local reactor
+	while reactor == nil do
+		for _, perph_name in pairs(peripheral.getNames()) do
+			if peripheral.getType(perph_name) == "fissionReactorLogicAdapter" then
+				logs.LogInfo("Fission Reactor Logic Adapter found: " .. perph_name)
+				reactor = peripheral.wrap(perph_name)
+				break
+			end
 		end
 	end
+
 	while true do
 		ControlReactor(reactor, GetReactorStatus(reactor))
 		sleep(1) -- Run once per second
